@@ -1,0 +1,43 @@
+﻿@model DogAndPeoples.Models.Dog
+
+@{
+    ViewBag.Title = "Details";
+ 
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Cachorro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Race)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Race)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.People)
+        </dt>
+
+        <dd>
+            @ViewBag.PeopleName
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }, new { @class="btn btn-warning" }) |
+    @Html.ActionLink("Voltar", "Index", new { }, new { @class="btn btn-default" })
+</p>
