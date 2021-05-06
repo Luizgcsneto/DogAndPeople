@@ -13,7 +13,7 @@ namespace DogAndPeoples.Models
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         [MaxLength(100, ErrorMessage = "no máximo 100 caracteres")]
-        [Display(Name = "Nome do dono do cachorro")]
+        [Display(Name = "Nome do dono")]
         public string Name { get; set; }
         public virtual ICollection<Dog> Dogs { get; set; }
 
